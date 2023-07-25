@@ -1,0 +1,156 @@
+<!--
+date:7/19/2023 
+Introduction to Html
+Basic syntax
+Tags:
+Text formatting tags:
+These tags are used to format or modify the text
+b-bold
+i-italic
+u-underline
+mark
+em-emphazise
+del-delete
+sup-superscript
+sub-subscript
+small
+big
+order list
+Anchor tag:
+Anchor tag <a>URL</a> is used to redirect for any url or webpages
+In anchor target is one of the attribute used to open the webiste or the external link in the new tab
+List:
+There are three types of list tags on html, it is used to show the group of elements
+Ordered list- It displays the serial numbers like 1,2,3 etc. <ol> <li>content1</li>.....</ol>
+if you want roman numbers or alphabets you have to activate the style attributes
+Example:
+<ol type="I">
+    <li>
+        heading1
+    </li>
+</ol>
+output:
+I Heading 
+Unordered list- It doesnt display the serial number, it displays dot symbol. <ul> <li>content1</li>.....</ul>
+Description list- To have a detailed information. <dl> <dt>Description heading</dt> <dd>Description conetent</dd>.....</dll>
+Image:
+
+-->
+
+<!Doctype html>
+<html>
+    
+    <head>
+         <!--Title tag represents the name of the webpage, title tag is commonly used in head tag-->
+        <title>
+            Introduction to HTML
+        </title>
+    </head>
+
+    <body>
+
+      <!-- The entire content is present in the body tag   -->
+      <!-- Heading tags are used to show the headings -->
+      <!-- Heading tag contains a range from h1 to h6 -->
+      <!-- To place a heading or content in the center of the webpage we use center tag -->
+      <!-- To create a Horizontal line we use HR tag -->
+      <!-- To create a paragraph we use P tag -->
+      <!-- Break BR is a self closing tag, it used to create gaps between the paragraph or the content-->
+
+      <center>
+
+        <h1>
+            <!-- H1 is the highest sized tag -->
+            Heading 1 
+          </h1>
+          <h2>
+            Heading 2
+          </h2>
+          <h3>
+            Heading 3
+          </h3>
+          <h4>
+            Heading 4
+          </h4>
+          <h5>
+            Heading 5
+          </h5>
+          <h6>
+            <!-- H6 is the lowest sized tag -->
+            Heading 6
+          </h6>
+      </center>
+
+      <!-- Anchor tag <a>URL</a> is used to redirect for any url or webpages, files. Target is one if the attribute it opens the external link in the new tab-->
+      <a href="../filhtml.html" target="_blank">Click here</a>
+
+      <ol type="I">
+        <li>
+            heading1
+            <ol>
+                head1
+            </ol>
+        </li>
+        <li>
+            heading2
+        </li>
+      </ol>
+
+      </ol>
+    </body>
+
+</html>
+
+
+
+
+
+
+<!Doctype html>
+<html>
+    
+    <head>
+         <!--Title tag represents the name of the webpage, title tag is commonly used in head tag-->
+        <title>
+            Introduction to HTML
+        </title>
+    </head>
+
+    <body>
+
+      <!-- The entire content is present in the body tag   -->
+      <!-- Heading tags are used to show the headings -->
+      <!-- Heading tag contains a range from h1 to h6 -->
+      <!-- To place a heading or content in the center of the webpage we use center tag -->
+      <!-- To create a Horizontal line we use HR tag -->
+      <!-- To create a paragraph we use P tag -->
+      <!-- Break BR is a self closing tag, it used to create gaps between the paragraph or the content-->
+
+      <center>
+
+        <h1>
+            <!-- H1 is the highest sized tag -->
+            Heading 1 
+          </h1>
+          <h2>
+            Heading 2
+          </h2>
+          <h3>
+            Heading 3
+          </h3>
+          <h4>
+            Heading 4
+          </h4>
+          <h5>
+            Heading 5
+          </h5>
+          <h6>
+            <!-- H6 is the lowest sized tag -->
+            Heading 6
+          </h6>
+      </center>
+
+
+    </body>
+
+</html>
