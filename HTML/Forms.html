@@ -1,0 +1,109 @@
+<!--
+    Date:7/24/2023
+    Forms:
+    These are the type of things where a user can give there inputs example registration forms.
+    To implement forms we use form tag.
+    
+    Attributes:
+    
+    Value:
+    It presents the default value in the form if we use this attribute.
+    
+    readonly:
+    It used to resrict the user to give input, i.ethis can be only readed but not modified.
+    
+    diasabled:
+    It used to disable an input box, it used to restrict the user to give the input.
+    
+    maxlength:
+    This used to limit the number.
+    Example: 
+    Mobile number entered by the user, must be 10 digits after the 10 digits it prevents the user to enter the value.
+
+    placeholder:
+    It is used to display the particular information that a user must enter in the input box.
+    
+    required:
+    It is used to restrict the user to submit the form with out filling the form completely or the required information.
+    
+    autofocus:
+    It automatically moves the control to the second input box after filling the first input box.
+
+    Auto complete:
+    It is used to give the suggestions to the user to fill the data in an input.
+
+    lable:
+    It is one of the tag used in forms, it tells about the type of information, that an user has to fill.
+    
+    Type:
+    In this form there is another attribute called type, this is used to classify the type of input the user must give.
+    some of the input types are:
+    text
+    number    
+    tel
+    password    
+    email
+    radio
+    checkbox
+    date
+    file
+    range
+    color
+    submit
+    reset
+    button
+    <textarea></textarea>:
+    This is a tag used to enter some text by a user in the form.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form tag</title>
+    </head>
+    
+    <body bgcolor="gold">
+        <h1 align="center">Sample form</h1>
+        <hr color="black">
+        <center>
+        <form>
+            name:<input type="text" name="name" placeholder="Enter your name">
+            <br><br>
+            age:<input type="date" age="age" placeholder="Enter your age">
+            <br><br>
+            college:<input type="text" college="college" >
+            <br><br>
+            email:<input type="email" email="email"> 
+            <br><br>
+            password:<input type="password" password="password">
+            <br><br>
+            <label>Choose the gender</label>
+            <!--In the below 2 lines we have created the unique selection
+            as in a form the gender has to be select male or female
+            and the user must not able to select the both options soo 
+            we have added a tag called name in the below both lines where 
+            they has the same name these avoid that type of things.-->
+            Male<input type="radio" name="Gender">
+            Female<input type="radio" name="Gender">
+            <br><br>
+            Please agree the terms and conditions:<input type="checkbox">
+            <br><br>
+            upload a file:<input type="file">
+            <br><br>
+            <label>Select a college</label>
+            <select>
+                <option>- - select - -</option>
+                <option>AEC</option>
+                <option>ACOE</option>
+                <option>ACET</option>
+            </select>
+            <br><br>
+            <label>Enter remarks</label>
+            <textarea style="height: 100px;width: 100px;"></textarea>
+            <br><br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+        </center>  
+    </body>
+</html>
