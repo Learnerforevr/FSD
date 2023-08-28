@@ -1,0 +1,58 @@
+<!--
+    Date:7/27/2023
+    Introduction to CSS
+    There are three phases
+    1.Inline styling
+    2.Internal styling 
+    3.External styling
+    These are three types of phases used in css.
+  
+    Inline:
+    These are the tags used in the tag.
+
+    Internal styling:
+    These are the styling tags used in the head tags.
+    
+    External styling:
+    These are the styling tags used in a new page.
+    In this type of stylings to styling tags are used in the main page.
+    For using this we should create a external css file with .css extention
+    and apply the link tag in the head tag.
+    
+    Selectors in css:
+    This is a type of tag used to implement internal and external style tags easily.
+   
+    By class name
+    for class selectors we use symbol .
+    
+    By id name
+    for id selectors we use symbol #.
+    
+    By element name
+    By universl selector
+    attribute selector
+    pseudo selector
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="stylesheet" type="text/css" href="/Externalstyling.css">
+        <title>Inline stylings</title>
+        <style>
+            .hlla{
+                font-size: 50;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <h1 style="color: blue;">Inline stylings</h1>
+        <p style="background-color: black;color: white;">Inline stylings</p>
+        <p class="hlla">This is internal styling</p>
+        <p class="external">External styling</p>
+        <p id="idselector">Id selctor</p>
+    </body>
+</html>
