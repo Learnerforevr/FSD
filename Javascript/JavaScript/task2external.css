@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+#divmainall{
+    height: 540px;
+    width: 810px;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+#divmain1{
+    background-image: url(1.jpeg);
+    height: 180px;
+    width: 270px;
+    float: left;
+}
+
+#divmain2{
+    float:left;
+    background-image: url(2.jpeg);
+    height: 180px;
+    width: 270px;
+}
+
+#divmain3{
+    float:left;
+    background-image: url(3.jpeg);
+    height: 180px;
+    width: 270px;
+}
+
+#output_id{
+    float:right;
+    height: 180px;
+    width: 270px;
+    border:5px solid black;
+    margin-top: 100px;
+    margin-left: 50px;      
+}

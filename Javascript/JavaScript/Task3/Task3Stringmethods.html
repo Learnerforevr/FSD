@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h2>Sting Methods</h2>
+
+	 <script type="text/javascript">
+	 	//substr
+	 	let str='Full Stack'
+	 	document.write("Substr of "+str+" is "+str.substr(1,5)+"<br>");
+	 	//substring
+	 	document.write("Substring of "+str+" is "+str.substring(5,1)+"<br>");
+	 	//replace
+	 	str1="AN"
+	 	document.write("replacement of A with F in "+str1+" is "+str1.replace('A','F')+"<br>");
+	 	//search
+	 	str2="hello"
+	 	document.write("The position of the first occurrence of l is:"+str2.search("l")+"<br>");
+	 	//toLocaleLowerCase
+	 	str3="TOLOCALELOWERCASE METHOD"
+	 	document.write(str3.toLocaleLowerCase()+"<br>");
+	 	//toLocaleUpperCase
+	 	str4="tolocaleuppercase method"
+	 	document.write(str4.toLocaleUpperCase()+"<br>");
+	 	//indexOf
+	 	document.write("Index of S in Full Stack is:"+str.indexOf("S")+"<br>");
+	 	//includes
+	 	document.write(str.includes("Full")+"<br>");
+	 	//slice
+	 	document.write("Slice(-4,-2) method applied on string Full Stack.Result is "+str.slice(-4,-2)+"<br>");
+	 	//concat
+	 	str5=" 2025 Batch"
+	 	document.write("Concatenation 2 strings Full Stack and 2025 Batch : "+str.concat(str5)+"<br>");
+	 	//lastIndexOf
+	 	document.write("The position of the last occurrence of l is "+str2.lastIndexOf('l')+"<br>");
+	 	//charCodeAt
+	 	document.write(str.charCodeAt(0)+"<br>");
+	 	//trim
+	 	str6='          Harsha          '
+	 	document.write(str6.trim(" ")+"<br>");
+	 	//charAt
+	 	document.write(str.charAt(1)+"<br>");
+	 	//valueOf
+	 	document.write(str.valueOf()+"<br>");
+	 	//split
+	 	document.write(str.split(" ")+"<br>");
+	 	//toString
+	 	document.write(str.toString()+"<br>");
+	 	//match
+	 	str7="Nature Hits Hard when it Hurts Bad.";
+	 	document.write(str7.match(/ain/g)+"<br>");
+	 </script>
+</body>
+</html>

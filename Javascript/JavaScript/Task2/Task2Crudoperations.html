@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Example with Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Table Example with Bootstrap</h1>
+        <button id="addBtn" class="btn btn-primary mb-2">Add Row</button>
+        <table id="dataTable" class="table mt-3">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be added dynamically using JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const data = [
+            { name: 'John Doe', email: 'johndoe@example.com' },
+            { name: 'Jane Smith', email: 'janesmith@example.com' },
+            // Add more data as needed
+        ];
+
+        const tableBody = document.querySelector('#dataTable tbody');
+        const addBtn = document.getElementById('addBtn');
+
+        addBtn.addEventListener('click', addRow);
+
+        data.forEach(rowData => {
+            appendRow(rowData);
+        });
+
+        tableBody.addEventListener('click', function (event) {
+            const target = event.target;
+            if (target.classList.contains('editBtn')) {
+                editRow(target);
+            } else if (target.classList.contains('saveBtn')) {
+                saveRow(target);
+            } else if (target.classList.contains('deleteBtn')) {
+                deleteRow(target);
+            }
+        });
+
+        
+            function addRow() {
+    const newRowData = { name: '', email: '' };
+    appendRowWithInputs(newRowData);
+}
+        
+
+        function appendRow(rowData, isNewRow = false) {
+            const row = document.createElement('tr');
+
+            const nameCell = document.createElement('td');
+            nameCell.textContent = rowData.name;
+
+            const emailCell = document.createElement('td');
+            emailCell.textContent = rowData.email;
+
+            const actionCell = document.createElement('td');
+            const actionButton = document.createElement('button');
+            actionButton.textContent = isNewRow ? 'Save' : 'Edit';
+            actionButton.classList.add('btn', 'btn-sm', 'btn-success', isNewRow ? 'saveBtn' : 'editBtn');
+            actionCell.appendChild(actionButton);
+
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+            deleteButton.classList.add('btn', 'btn-sm', 'btn-danger', 'deleteBtn');
+            actionCell.appendChild(deleteButton);
+
+            row.appendChild(nameCell);
+            row.appendChild(emailCell);
+            row.appendChild(actionCell);
+
+            tableBody.appendChild(row);
+        }
+
+        function editRow(editBtn) {
+            const row = editBtn.closest('tr');
+            const nameCell = row.cells[0];
+            const emailCell = row.cells[1];
+
+            const nameValue = nameCell.textContent;
+            const emailValue = emailCell.textContent;
+
+            nameCell.innerHTML = `<input type="text" class="form-control" value="${nameValue}">`;
+            emailCell.innerHTML = `<input type="email" class="form-control" value="${emailValue}">`;
+
+            editBtn.textContent = 'Save';
+            editBtn.classList.replace('btn-success', 'btn-warning');
+            editBtn.classList.remove('editBtn');
+            editBtn.classList.add('saveBtn');
+        }
+
+        function saveRow(saveBtn) {
+            const row = saveBtn.closest('tr');
+            const nameInput = row.cells[0].querySelector('input');
+            const emailInput = row.cells[1].querySelector('input');
+
+            if (nameInput && emailInput) {
+                const newName = nameInput.value;
+                const newEmail = emailInput.value;
+
+                row.cells[0].textContent = newName;
+                row.cells[1].textContent = newEmail;
+            }
+
+            saveBtn.textContent = 'Edit';
+            saveBtn.classList.replace('btn-warning', 'btn-success');
+            saveBtn.classList.remove('saveBtn');
+            saveBtn.classList.add('editBtn');
+        }
+
+        function deleteRow(deleteBtn) {
+            const row = deleteBtn.closest('tr');
+            const confirmDelete = confirm("Do you want to delete the record?");
+
+    // If the user confirms, delete the row
+    if (confirmDelete) {
+        row.remove();
+    }
+        }
+        function appendRowWithInputs(rowData) {
+    const row = document.createElement('tr');
+
+    const nameCell = document.createElement('td');
+    const nameInput = document.createElement('input');
+    nameInput.type = 'text';
+    nameInput.className = 'form-control';
+    nameInput.value = rowData.name;
+    nameCell.appendChild(nameInput);
+
+    const emailCell = document.createElement('td');
+    const emailInput = document.createElement('input');
+    emailInput.type = 'email';
+    emailInput.className = 'form-control';
+    emailInput.value = rowData.email;
+    emailCell.appendChild(emailInput);
+
+    const actionCell = document.createElement('td');
+    const saveButton = document.createElement('button');
+    saveButton.textContent = 'Save';
+    saveButton.className = 'btn btn-sm btn-success saveBtn';
+    actionCell.appendChild(saveButton);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.className = 'btn btn-sm btn-danger deleteBtn';
+    actionCell.appendChild(deleteButton);
+
+    row.appendChild(nameCell);
+    row.appendChild(emailCell);
+    row.appendChild(actionCell);
+
+    tableBody.appendChild(row);
+}
+    </script>
+</body>
+</html>

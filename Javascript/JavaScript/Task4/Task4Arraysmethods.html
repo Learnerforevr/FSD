@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array Methods</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		function arrays1(arr) {
+			document.write("<br>"+arr+"<br>")
+		}
+		let arr1 = ["hello","Hi","This","is","Harsha"];
+		let arr2 = [19,18,199,12]
+		let arr3 = ""
+
+		arrays1("Map: "+arr2.map(Math.cbrt))
+		arrays1("Filter: "+arr2.filter(greater))
+		arrays1("Sort: "+arr2.sort())
+		arrays1("forEach: "+arr1.forEach(myFun))
+		arrays1("concat: "+arr1.concat(arr2))
+		arrays1("every: "+arr2.every(greater))
+		arrays1("some: "+arr2.some(greater))
+		arrays1("includes: "+arr1.includes('hello',4))
+		arrays1("join: "+arr1.join())
+		arrays1("reduce: "+arr2.reduce(myFunc,0))
+		arrays1("find: "+arr2.find(greater))
+		arrays1("findIndex: "+arr1.findIndex(greater))
+		arrays1("IndexOf: "+arr1.indexOf("hello"))
+		arrays1("fill: "+arr1.fill("Sidda",3))
+		arrays1("slice: "+arr1.slice(0,2))
+		arrays1("reverse: "+arr1.reverse())
+		arrays1("push: "+arr2.push())
+		arrays1("pop: "+arr2.pop())
+		arrays1("shift: "+arr1.shift())
+		arrays1("unshift: "+arr1.unshift())
+		function greater(arr2) {
+			// body...
+			return arr2>50
+		}
+
+		function myFun(item, index) {
+ 			 return arr3 += index + ": " + item + "<br>"; 
+		}
+
+		function myFunc(total, num) {
+		  		return total - num;
+		}
+
+
+	</script>
+</body>
+</html>

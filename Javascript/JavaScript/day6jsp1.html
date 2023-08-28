@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<body>
+    <script>
+        // var any name=(arg1,arg2,arg3,.....,argn)=>{
+            //body
+            //return value
+        //}
+
+        //Type1
+        product=(num1,num2)=>{
+            var result=num1*num2;
+            return result;
+        }
+        document.write(product(num1,num2));
+
+        //Type2:
+        //If only one statement
+        product=(num1,num2)=>num1*num2
+        document.write(product(4,5))
+
+        //Example for type 2.
+        g=()=>{document.write("good afternoon")}
+        g()
+
+        //Type3:
+        //If only one parameter
+        cube=(num1)=>{
+            return num1*num1*num1}
+        document.write(cube(2))
+        
+    </script>
+</body>
+</html>

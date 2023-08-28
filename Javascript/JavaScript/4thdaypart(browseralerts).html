@@ -1,0 +1,57 @@
+<!--
+    Day:16/08/2023
+    Browser alerts
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script type="text/javascript">
+            //alert("Successfully completed")
+            var name='Ajay'
+            var c=confirm("Are you sure want to delete Mr."+name);
+            document.write(c);
+            if(c==true)
+            {
+                alert("Mr."+name+" your record is deleted")
+            }else{
+                alert("Mr."+name+" your record is cancelled")
+            }
+
+            //We have to use the promt if we want to enter any input values in the browser.
+            var t=prompt('Enter the value')
+            document.writeln(t)
+
+            //Example task
+            //Add two numbers by using two promts.
+            var a=prompt("Enter the value of a")
+            var b=prompt("Enter the value of b")
+            //The entered input is String, and Strings can't be added, so it should be converted to integer.
+            //For that purpose there is package called parseint, it converts the string into integer.
+            //The package converts the string into integer.
+            c=parseInt(a)+parseInt(b)
+            document.write(c)
+
+            //if we enter any arithmetic values, in that situation we had to evaluate, in js there is a package called eval.
+            //It evaluate the entered value.
+            var t=prompt('Enter the value')
+            document.writeln(eval(t))
+
+            //We have three kinds of declared variables,
+            /*
+            1.var:
+                //These are known as global scope variables.
+                //That is it can be accessed in entire page.
+            2.let:
+                These are the block level variables.
+                That is it can be initazed in block only
+            3.const
+            */
+
+            
+        </script>
+    </body>
+</html>

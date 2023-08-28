@@ -1,0 +1,50 @@
+<!--
+    Day:25/08/2023
+    Topics:
+    Array methods:
+    map()
+    each
+    filter
+    find 
+    some
+    every
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let trainees=['venkatesh','divya','ajay','vinay'];
+        //for(var i=0;i<trainees.length;i++)
+        //console.log(trainees[i])
+        //{
+        //}
+        
+        //let arr1 = trainees.map(function(ele,index,old_arr){
+        //    return "Dear "+ele
+        //})
+        //trainees.map(function(trainee_name,i,arr)
+        //{
+        //    console.log(trainee_name)    
+        //})
+        let trainees1=[
+        {
+            'name':'raju',
+            'rollno':1234
+        },
+        {
+            'name':'kiran',
+            'rollno':5555
+        }
+        ]
+        let tr='';
+        trainees1.map(function(each_trainee,i,arr){
+            tr="<td>"+(i+1)+"</td>";
+        })
+    </script>
+</body>
+</html>

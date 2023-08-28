@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter name</label>
+    <input type="text" onkeyup="sample(this.value)" id="ins_id">
+    <br>
+    <span id="sp_id"></span>
+    <span id="size_off"></span>
+    <script>
+        function sample(str)
+        {
+            document.getElementById('sp_id').innerText='Only 6 characters';
+
+            if(str==''){
+                document.getElementById('sp_id').innerText='please enter the name';
+            }
+       
+            else if(str.length>6){
+                document.getElementById('size_off').innerText=str.length;
+            }
+
+        }
+    </script>
+</body>
+</html>

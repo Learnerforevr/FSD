@@ -1,0 +1,78 @@
+<!--
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | EVENTS</title>
+</head>
+<body>
+    <button id="btn_id">
+        Click here
+    </button>
+
+    <script>
+        let btn=document.getElementById('btn_id')
+        
+        //with function name
+        /*btn.onclick=test
+        function test()
+        {
+            alert("testing");
+        }*/
+
+        //with anonymous function
+        btn.onclick=function() 
+        {
+            alert("testing...")
+        }
+
+        
+    </script>
+</body>
+</html>
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>various input techniques</title>
+	<style>
+		#hid{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+		<h1 id="name">Various input methods</h1>
+		<button onclick="fun2()">input from prompt</button>
+		<button onclick="fun()">input from input tag</button>
+		<div id="hid">
+		<input type="text" id="Name">
+		<button onclick="cli()">click</button></div>
+		<button onclick="hide()">hide</button>
+		<script>
+			function fun2()
+			{
+			var a=window.prompt("enter your name ");
+			document.getElementById("print").innerHTML=a;
+			}
+			function fun(){
+				document.getElementById("hid").style.display="block";
+			}
+			function cli()
+			{
+				var b=document.getElementById("Name");
+				document.getElementById("print").innerHTML=b.value;	
+			}
+			function hide()
+			{
+				document.getElementById("hid").style.display="none";
+			}
+		</script>
+		<p id="print"></p>
+</body>
+</html>

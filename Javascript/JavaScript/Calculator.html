@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <center>
+        <table border="1">
+            <tr>
+                <td colspan="4" style="height:30px;text-align:right;" id="result_id"> </td>
+            </tr>
+
+            <tr>
+                <td onclick="getnum('9')">9</td>
+                <td onclick="getnum('8')">8</td>
+                <td onclick="getnum('7')">7</td>
+                <td onclick="getnum('/')">/</td>
+            </tr>
+
+            <tr>
+                <td onclick="getnum('6')">6</td>
+                <td onclick="getnum('5')">5</td>
+                <td onclick="getnum('4')">4</td>
+                <td onclick="getnum('*')">*</td>
+            </tr>
+
+            <tr>
+                <td onclick="getnum('3')">3</td>
+                <td onclick="getnum('2')">2</td>
+                <td onclick="getnum('1')">1</td>
+                <td onclick="getnum('-')">-</td>
+            </tr>
+
+            <tr>
+                <td onclick="getnum('0')">0</td>
+                <td onclick="clearall()">c</td>
+                <td onclick="getnum('=')">=</td>
+                <td onclick="getnum('+')">+</td>
+            </tr>
+
+            <tr>
+                <td onclick="getfunc('n*n')">n2</td>
+                <td onclick="getfunc('n*n*n')">n3</td>
+                <td onclick="getfunc('.')">.</td>
+                <td onclick="getfunc('root')">root</td>
+            </tr>
+        </table>
+    </center>
+
+    <script type="text/javascript">
+            function getnum(val)
+            {
+
+                if(val=='=')
+                {
+                    let res=document.getElementById('result_id').innerText
+                    document.getElementById('result_id').innerText=eval(res)
+
+                }
+                document.getElementById('result_id').innerText+=val;
+
+            }
+
+            function clearall()
+            {
+                    document.getElementById('result_id').innerText=' ';
+            }
+
+            function getfunc()
+            {
+
+            }
+    </script>
+
+</body>
+</html>

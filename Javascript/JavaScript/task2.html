@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task--</title>
+	<link rel="stylesheet" href="task2external.css">
+</head>
+<body>
+
+	<div id="divmainall">
+		<div onmouseover="car1()" id="divmain1"></div>
+		<div onmouseover="car2()" id="divmain2"></div>
+		<div onmouseover="car3()" id="divmain3"></div>	
+	</div>
+
+
+
+	<script>
+		function car1()
+		{
+			document.getElementById('output_id').innerHTML="<img src='1.jpeg' style='width:270px;height:180px;'/>"
+		}
+		function car2()
+		{
+			document.getElementById('output_id').innerHTML="<img src='2.jpeg' style='width:270px;height:180px;'/>"
+		}
+		function car3()
+		{
+			document.getElementById('output_id').innerHTML="<img src='3.jpeg' style='width:270px;height:180px;'/>"
+		}
+	</script>
+
+	<div id="output_id" > </div>
+
+
+</body>
+</html>

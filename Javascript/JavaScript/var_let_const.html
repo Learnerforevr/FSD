@@ -1,0 +1,48 @@
+<!--
+    Date:16/08/2023
+    Topic:Declaring the variables
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Decalring variables</h1>
+        <script>
+
+        //Global scope variable
+        //These are declared with var.
+        var a=10;
+        document.write("<br>")
+        document.write(a);
+            
+        //In js we cannot redeclare the variables with new values, but we can reasign the variables with Let.        
+        let b=10;
+        
+        document.write("The variable before reassign")
+        document.write("<br>")
+        document.write(b)
+        b=20;
+        document.write("The variable after reassign")
+        document.write("<br>")
+        document.write(b)
+        document.write("<br>")
+       
+        //Block scope variable
+        {
+            let name1='jdp'
+            document.write(name1)
+        }
+        
+        //Const variables
+        //These variable values cannot be changed.
+        const pi=3.14
+        document.write(pi)
+
+        
+        </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#divmain1{
+    background-color: black;
+    height: 180px;
+    width: 250px;
+}
+
+#div1{
+    background-color: black;
+    height: 180px;
+    width: 250px;
+    background-image: url(1.jpeg);
+}
+
+#div2{
+    background-color: black;
+    height: 180px;
+    width: 250px;
+    background-image: url(2.jpeg);
+}
+
+#div3{
+    background-color: black;
+    height: 180px;
+    width: 250px;
+    background-image: url(3.jpeg);
+}
+#div1p1{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 100px;
+    color: silver;
+}
+
+#div1p2{
+    position: absolute;
+    margin-top: 150px;
+    margin-left:75px;
+    color: silver;
+}
